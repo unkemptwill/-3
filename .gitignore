@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+asset-list.json
+contact-sheet.jpg
+*-works.mjs
+update-hero.mjs
+add-software.mjs
+remove-masthead.mjs
+restyle-work.mjs
