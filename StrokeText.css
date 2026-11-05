@@ -1,0 +1,27 @@
+
+.stroke-text {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.stroke-text--hover {
+  cursor: pointer;
+}
+
+.stroke-text__svg {
+  display: block;
+  width: 100%;
+  max-width: var(--stroke-text-width, 600px);
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.stroke-text__stroke,
+.stroke-text__fill {
+  user-select: none;
+}
+
+
+.revived-hero h1.stroke-heading{max-width:850px;pointer-events:auto;margin-left:-16px}.stroke-heading .stroke-text__svg{margin:0}.stroke-heading .stroke-line-two{margin-left:6%;max-width:94%}.stroke-heading .stroke-text{font-style:normal}@media(max-width:900px){.revived-hero h1.stroke-heading{max-width:100%;margin-left:-8px}}
