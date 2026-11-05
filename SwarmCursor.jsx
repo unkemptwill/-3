@@ -1,6 +1,6 @@
 
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './SwarmCursor.css';
 
 const MAX_PARTICLES = 2000;
@@ -946,5 +946,6 @@ const SwarmCursor = ({
 };
 
 export default SwarmCursor;
+
 
 
