@@ -209,6 +209,7 @@ const FadeContent = ({
       const noisy = NOISE_EFFECTS.includes(effect);
       const looks = noisy ? [] : getLooks(effect, blurAmount, startOpacity);
       if (section) looks.push({ from: { y: 22 }, to: { y: 0 }, share: 1 });
+      if (el.classList.contains('work-reveal')) looks.push({ from: { y: 32 }, to: { y: 0 }, share: 1 });
 
       if (noisy) masks = targets.map(target => createNoiseMask(target, effect, startOpacity, blurAmount));
       const proxies = masks.map(mask => mask.state);
