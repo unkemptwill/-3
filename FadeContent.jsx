@@ -193,7 +193,8 @@ const FadeContent = ({
     let follow = null;
 
     const ctx = gsap.context(() => {
-      const targets = stagger > 0 && el.children.length ? Array.from(el.children) : [el];
+      const section = el.classList.contains('section-flow') ? el.querySelector('section') : null;
+      const targets = section ? Array.from(section.children) : stagger > 0 && el.children.length ? Array.from(el.children) : [el];
       gsap.set(el, { visibility: 'visible' });
 
       if (reduce) {
@@ -207,6 +208,7 @@ const FadeContent = ({
       const staggerVars = stagger > 0 ? { stagger: { each: toSeconds(stagger), from: staggerFrom } } : {};
       const noisy = NOISE_EFFECTS.includes(effect);
       const looks = noisy ? [] : getLooks(effect, blurAmount, startOpacity);
+      if (section) looks.push({ from: { y: 22 }, to: { y: 0 }, share: 1 });
 
       if (noisy) masks = targets.map(target => createNoiseMask(target, effect, startOpacity, blurAmount));
       const proxies = masks.map(mask => mask.state);
