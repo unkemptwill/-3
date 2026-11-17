@@ -1,0 +1,15 @@
+.scanner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scanner-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.revived-hero .hero-scanner {position:absolute;inset:0;z-index:0;pointer-events:none;mask-image:linear-gradient(90deg,transparent 16%,#000 65%)} .hero-scanner canvas{pointer-events:none}
